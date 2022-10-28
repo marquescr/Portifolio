@@ -41,33 +41,69 @@ main{
     margin: 20px 5px;
 }
 
-#prjlink{
+projects{
+    display: flex;
+    justify-content: space-between;
+}
+
+latest{
+    display: flex;
+    justify-items: space-evenly;
+}
+
+#lastproject{
     width: 100%;
+}
+
+.content-grid{
+    display: grid;
+    background-color: aliceblue;
+    grid-template-areas:
+    "folder title title"
+    "descr descr descr"
+    "icon icon lang";
+    grid-auto-columns: auto;
+}
+
+.pfolder{
+    grid-area: folder;
+    /* background-color: royalblue */
+}
+
+.ptitulo{
+    grid-area: title;
+    background-color: yellowgreen;
+    display: flex;
+    justify-content: left;
+}
+
+.pdescription{
+    grid-area: descr;
+    background-color: red;
+}
+
+.l-foot{
+    display: flex;
+    justify-content: flex-start;
+    grid-area: icon;
+    background-color: darkgoldenrod;
+}
+
+.l-foot figure{
+    background-color: rebeccapurple;
+    display: flex;
+    margin: 5px 0;
+}
+
+.r-foot{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    grid-area: lang;
 }
 
 profile{
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-projects{
-    background-color: yellow;
-}
-
-latest{
-    display: flex;
-    justify-content: space-evenly;
-}
-
-recent{
-    grid-area: recent;
-    background-color: green;
-    margin: 20px;
-}
-
-about{
-    grid-area: about;
-    background-color: magenta;
-    margin: 20px;
 }
